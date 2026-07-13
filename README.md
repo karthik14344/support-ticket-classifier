@@ -57,16 +57,16 @@ This project demonstrates **prompt engineering**, **provider abstraction**, and 
 
 ```
 ┌─────────────────┐     HTTP/JSON      ┌──────────────────────────────────┐
-│  Flutter App    │ ─────────────────► │  FastAPI Backend                  │
+│  Flutter App    │ ─────────────────► │  FastAPI Backend                 │
 │  (Frontend)     │ ◄───────────────── │  ┌────────────┐  ┌─────────────┐ │
 └─────────────────┘                    │  │ API Routes │→ │ Classifier  │ │
                                        │  └────────────┘  │   Service   │ │
                                        │                  └──────┬──────┘ │
-                                       │                         │       │
+                                       │                         │        │
                                        │                  ┌──────▼──────┐ │
                                        │                  │ LLM Service │ │
                                        │                  └──────┬──────┘ │
-                                       │                         │       │
+                                       │                         │        │
                                        │                  ┌──────▼──────┐ │
                                        │                  │   OpenAI    │ │
                                        │                  │  Provider   │ │
